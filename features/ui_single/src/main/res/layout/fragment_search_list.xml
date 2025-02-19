@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:adjustViewBounds="true"
+        android:contentDescription="@null"
+        android:scaleType="centerCrop"
+        android:src="@drawable/ic_window_b1" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <!--app:endIconDrawable="@drawable/ic_search_black_24dp"-->
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/store_til"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:windowSoftInputMode="stateAlwaysHidden">
+            <!--android:drawableStart="@drawable/ic_search_black_24dp"-->
+            <!--android:drawableLeft="@drawable/ic_search_black_24dp"-->
+            <AutoCompleteTextView
+                android:id="@+id/auto_text_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/hint_sleep_search"
+                android:maxLines="1"
+                android:singleLine="true"
+                android:windowSoftInputMode="stateAlwaysHidden" />
+        </com.google.android.material.textfield.TextInputLayout>
+    </androidx.cardview.widget.CardView>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/header"
+        android:orientation="horizontal">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_toStartOf="@id/alphSectionIndex"
+            android:background="@null"
+            android:scrollbarStyle="outsideOverlay"
+            tools:listitem="@layout/abc_item_category" />
+
+        <TextView
+            android:id="@+id/mm"
+            android:layout_width="44dp"
+            android:layout_height="44dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_gravity="center"
+            android:layout_margin="8dp"
+            android:layout_marginEnd="5dp"
+            android:background="@drawable/button_letter_tile_game"
+            android:gravity="center"
+            android:padding="4dp"
+            android:text="@string/all_data"
+            android:textAlignment="center"
+            android:textColor="@android:color/black"
+            android:textSize="22sp"
+            android:textStyle="bold" />
+
+        <com.walhalla.quotes.Alphabetik
+            android:id="@+id/alphSectionIndex"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/mm"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_gravity="center_vertical"
+            android:layout_marginEnd="5dp"
+            android:layout_marginRight="5dp"
+            android:padding="4dp"
+            app:fontSize="22sp"
+            app:itemsColor="@android:color/black" />
+
+    </RelativeLayout>
+</RelativeLayout>

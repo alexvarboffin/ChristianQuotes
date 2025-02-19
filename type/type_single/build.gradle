@@ -1,0 +1,41 @@
+plugins {
+    alias(libs.plugins.android.library)
+    alias(libs.plugins.kotlin.android)
+}
+
+android {
+    namespace 'com.walhalla.typesingle'
+    compileSdk 35
+
+    defaultConfig {
+        minSdkVersion rootProject.minSdkVersion0
+        targetSdkVersion rootProject.targetSdkVersion0
+        consumerProguardFiles "consumer-rules.pro"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
+    }
+    kotlinOptions {
+        jvmTarget = '17'
+    }
+}
+
+dependencies {
+    implementation "androidx.appcompat:appcompat:$rootProject.compatVersion"
+    implementation "com.google.android.material:material:$rootProject.materialVersion"
+    implementation(project(":threader"))
+    implementation project(':library')
+    implementation(project(":features:ui"))
+    implementation project(':features:db_oraritreni')
+    implementation "androidx.room:room-runtime:$rootProject.roomVersion"
+    implementation libs.androidx.core.ktx
+    annotationProcessor "androidx.room:room-compiler:$rootProject.roomVersion"
+}

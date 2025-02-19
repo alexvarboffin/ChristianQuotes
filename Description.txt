@@ -1,0 +1,15 @@
+    private File initVideoFile() {
+        File externalStoragePublicDirectory = new File(Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_PICTURES) + "/VideoMaker");
+        if (!externalStoragePublicDirectory.exists()) {
+            boolean b = externalStoragePublicDirectory.mkdirs();
+        }
+        if (!externalStoragePublicDirectory.exists()) {
+            externalStoragePublicDirectory = getCacheDir();
+        }
+        return new File(externalStoragePublicDirectory, String.format("Story_maker_%s.mp4", new SimpleDateFormat("yyyy_MM_dd_HH_mm_ss").format(Long.valueOf(System.currentTimeMillis()))));
+    }
+
+
+    Photo Video Maker With Music
+    com.kessi.msvideomaker
+    com.kessi.msvideomaker

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_sample.xml"
+    app:startDestination="@id/statusListFragment">
+
+    <navigation android:id="@+id/navigation"
+        app:startDestination="@id/statusListFragment">
+        <fragment
+            android:id="@+id/statusListFragment"
+            android:name="com.christianquotestoinspire.bibleverses.motivation.fragment.StatusListFragment"
+            android:label="StatusListFragment" />
+    </navigation>
+
+
+</navigation>

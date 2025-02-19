@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_id" translatable="false">ca-app-pub-5111357348858303~9551847881</string>
+    <string name="b1" translatable="false">ca-app-pub-5111357348858303/6856551721</string>
+    <string name="appOpen" translatable="false">ca-app-pub-5111357348858303/3706841873</string>
+
+
+    <string name="admob_reward_ad_id" translatable="false">ca-app-pub-5111357348858303/3889024251</string>
+    <string name="admob_native_id" translatable="false">ca-app-pub-5111357348858303/3098686764</string>
+
+    <!--    <string name="interstitial_ad_unit_id" translatable="false">ca-app-pub-5111357348858303/9590183820</string>-->
+
+    <!--    <string name="url_privacy_policy" translatable="false">https://christianquotes-93271.web.app/privacy_policy.html</string>-->
+    <string name="url_privacy_policy" translatable="false">https://christianquotesen.web.app/privacy_policy.html</string>
+
+</resources>

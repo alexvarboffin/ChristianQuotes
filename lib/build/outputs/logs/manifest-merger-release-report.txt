@@ -1,0 +1,26 @@
+-- Merging decision tree log ---
+manifest
+ADDED from D:\walhalla\QUOTES\02_ChristianQuotes\lib\src\main\AndroidManifest.xml:2:1-10:12
+INJECTED from D:\walhalla\QUOTES\02_ChristianQuotes\lib\src\main\AndroidManifest.xml:2:1-10:12
+	package
+		INJECTED from D:\walhalla\QUOTES\02_ChristianQuotes\lib\src\main\AndroidManifest.xml
+	xmlns:android
+		ADDED from D:\walhalla\QUOTES\02_ChristianQuotes\lib\src\main\AndroidManifest.xml:2:11-69
+uses-permission#android.permission.INTERNET
+ADDED from D:\walhalla\QUOTES\02_ChristianQuotes\lib\src\main\AndroidManifest.xml:4:5-67
+	android:name
+		ADDED from D:\walhalla\QUOTES\02_ChristianQuotes\lib\src\main\AndroidManifest.xml:4:22-64
+uses-permission#android.permission.WRITE_EXTERNAL_STORAGE
+ADDED from D:\walhalla\QUOTES\02_ChristianQuotes\lib\src\main\AndroidManifest.xml:6:5-81
+	android:name
+		ADDED from D:\walhalla\QUOTES\02_ChristianQuotes\lib\src\main\AndroidManifest.xml:6:22-78
+application
+ADDED from D:\walhalla\QUOTES\02_ChristianQuotes\lib\src\main\AndroidManifest.xml:8:5-19
+uses-sdk
+INJECTED from D:\walhalla\QUOTES\02_ChristianQuotes\lib\src\main\AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from D:\walhalla\QUOTES\02_ChristianQuotes\lib\src\main\AndroidManifest.xml
+INJECTED from D:\walhalla\QUOTES\02_ChristianQuotes\lib\src\main\AndroidManifest.xml
+	android:targetSdkVersion
+		INJECTED from D:\walhalla\QUOTES\02_ChristianQuotes\lib\src\main\AndroidManifest.xml
+	android:minSdkVersion
+		INJECTED from D:\walhalla\QUOTES\02_ChristianQuotes\lib\src\main\AndroidManifest.xml

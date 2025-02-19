@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "980387714515",
+    "project_id": "inspirefaith-d938e",
+    "storage_bucket": "inspirefaith-d938e.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:980387714515:android:9a7e341e4a8e31c1d00b26",
+        "android_client_info": {
+          "package_name": "com.christianquotes.inspirefaith"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "980387714515-55ng83glpq5a9olpvtaib2psfatfbab6.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBWcnDi7jXuCIIrGbwSI2jf7geEJhtYn_8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "980387714515-55ng83glpq5a9olpvtaib2psfatfbab6.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

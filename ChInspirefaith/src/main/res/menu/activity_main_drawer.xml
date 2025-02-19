@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <!--<item-->
+        <!--android:id="@+id/action_all"-->
+        <!--android:icon="@drawable/ic_menu_send"-->
+        <!--android:title="" />-->
+        <!--<item-->
+        <!--android:id="@+id/nav_gallery"-->
+        <!--android:icon="@drawable/ic_menu_gallery"-->
+        <!--android:title="Gallery" />-->
+        <!--<item-->
+        <!--android:id="@+id/nav_slideshow"-->
+        <!--android:icon="@drawable/ic_menu_slideshow"-->
+        <!--android:title="Slideshow" />-->
+        <!--<item-->
+        <!--android:id="@+id/nav_manage"-->
+        <!--android:icon="@drawable/ic_menu_manage"-->
+        <!--android:title="Tools" />-->
+    </group>
+
+    <item
+        android:title="@string/app_name">
+        <menu android:id="@+id/menu_container">
+
+            <item
+                android:id="@+id/action_my_dreams"
+                android:icon="@drawable/ic_statuses"
+                android:title="@string/menu_all_categories" />
+
+            <item
+                android:id="@id/action_all_authors"
+                android:icon="@drawable/ic_statuses"
+                android:title="@string/menu_all_authors"
+                android:visible="false" />
+
+            <item
+                android:id="@+id/action_favorite_statuses"
+                android:icon="@drawable/ic_favorite_red"
+                android:title="@string/menu_favorite_statuses" />
+
+            <item
+                android:id="@+id/action_random_statuses"
+                android:icon="@drawable/ic_random_status"
+                android:title="@string/menu_action_random_statuses" />
+
+            <!--<item-->
+            <!--android:id="@+id/action_sleep_date"-->
+            <!--android:icon="@drawable/ic_menu_send"-->
+            <!--android:title="Дата сна" />-->
+        </menu>
+    </item>
+
+</menu>

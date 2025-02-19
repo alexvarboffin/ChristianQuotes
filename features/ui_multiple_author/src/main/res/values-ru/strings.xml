@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+
+    <string name="action_save">Сохранить</string>
+    <string name="action_copy">Копировать</string>
+    <string name="action_share">Поделиться</string>
+    <string name="file_saved">Файл сохранен</string>
+
+
+    <string name="action_share_text">Поделиться текстом</string>
+    <string name="action_share_image">Поделиться картинкой</string>
+
+    <string name="action_like">Нравится</string>
+    <string name="share_data">Отправка данных</string>
+    <string name="action_open">Открыть</string>
+    <string name="permission_title_needed">Требуется разрешение</string>
+
+    <string name="goToList">Перейти к списку</string>
+    <string name="menu_all_categories">Все категории</string>
+    <string name="action_share_status">Поделиться статусом</string>
+    <!--<string name="action_share_status">Поделиться цитатой</string>-->
+    <string name="hint_sleep_search">Введите слово для поиска</string>
+
+
+    <string name="copy_to_buffer">Скопировано в буфер обмена</string>
+
+    <string name="empty">Список избранных статусов пуст</string>
+    <string name="menu_action_random_statuses">Случайная цитата</string>
+    <string name="action_next_quote">Следующая цитата</string>
+    <string name="action_previous_quote">Предыдущая цитата</string>
+    <string name="action_random_quote">Случайная цитата</string>
+    <string name="share_as_text">Поделиться текстом</string>
+    <string name="share_as_image">Поделиться изображением</string>
+    <string name="permission_ok">Permission ok</string>
+    <string name="permission_not_allow">Permission not allow</string>
+</resources>

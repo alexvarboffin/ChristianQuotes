@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--    <integer-array name="c_title">-->
+    <!--        <item>@string/abc_cat_0</item>-->
+    <!--        ...-->
+    <!--    </integer-array>-->
+
+    <string-array name="c_title">
+        <item>@string/abc_cat_0</item>
+        <item>@string/abc_cat_1</item>
+        <item>@string/abc_cat_2</item>
+        <item>@string/abc_cat_3</item>
+        <item>@string/abc_cat_4</item>
+        <item>@string/abc_cat_5</item>
+        <item>@string/abc_cat_6</item>
+        <item>@string/abc_cat_7</item>
+        <item>@string/abc_cat_8</item>
+        <item>@string/abc_cat_9</item>
+        <item>@string/abc_cat_10</item>
+        <item>@string/abc_cat_11</item>
+        <item>@string/abc_cat_12</item>
+        <item>@string/abc_cat_13</item>
+        <item>@string/abc_cat_14</item>
+        <item>@string/abc_cat_15</item>
+        <item>@string/abc_cat_16</item>
+        <item>@string/abc_cat_17</item>
+        <item>@string/abc_cat_18</item>
+        <item>@string/abc_cat_19</item>
+        <item>@string/abc_cat_20</item>
+        <item>@string/abc_cat_21</item>
+        <item>@string/abc_cat_22</item>
+        <item>@string/abc_cat_23</item>
+        <item>@string/abc_cat_24</item>
+        <item>@string/abc_cat_25</item>
+    </string-array>
+
+<!--    <string-array name="cat_id">-->
+<!--        <item>@@</item>-->
+<!--    </string-array>-->
+
+    <string-array name="alphabet">
+        <item>A</item>
+        <item>B</item>
+        <item>C</item>
+        <item>D</item>
+        <item>E</item>
+        <item>F</item>
+        <item>G</item>
+        <item>H</item>
+        <item>I</item>
+        <item>J</item>
+        <item>K</item>
+        <item>L</item>
+        <item>M</item>
+        <item>N</item>
+        <item>O</item>
+        <item>P</item>
+        <item>Q</item>
+        <item>R</item>
+        <item>S</item>
+        <item>T</item>
+        <item>U</item>
+        <item>V</item>
+        <item>W</item>
+        <item>X</item>
+        <item>Y</item>
+        <item>Z</item>
+    </string-array>
+
+    <!--    <string-array name="glitch_colors">-->
+    <!--        <item>#ff0000</item>-->
+    <!--        <item>#00ff00</item>-->
+    <!--        <item>#0000ff</item>-->
+    <!--    </string-array>-->
+
+    <string-array name="glitch_colors">
+        <item>#ffffff</item>
+        <item>#ffffff</item>
+        <item>#ffffff</item>
+    </string-array>
+
+    <!--  720x720-->
+    <string-array name="background">
+        <item>@drawable/abc_ic_0</item>
+        <item>@drawable/abc_ic_1</item>
+        <item>@drawable/abc_ic_2</item>
+        <item>@drawable/abc_ic_3</item>
+        <item>@drawable/abc_ic_4</item>
+        <item>@drawable/abc_ic_5</item>
+        <item>@drawable/abc_ic_6</item>
+        <item>@drawable/abc_ic_7</item>
+        <item>@drawable/abc_ic_8</item>
+        <item>@drawable/abc_ic_9</item>
+        <item>@drawable/abc_ic_10</item>
+        <item>@drawable/abc_ic_11</item>
+        <item>@drawable/abc_ic_12</item>
+        <item>@drawable/abc_ic_13</item>
+        <item>@drawable/abc_ic_14</item>
+        <item>@drawable/abc_ic_15</item>
+        <item>@drawable/abc_ic_16</item>
+        <item>@drawable/abc_ic_17</item>
+        <item>@drawable/abc_ic_18</item>
+        <item>@drawable/abc_ic_19</item>
+        <item>@drawable/abc_ic_20</item>
+        <item>@drawable/abc_ic_21</item>
+        <item>@drawable/abc_ic_22</item>
+        <item>@drawable/abc_ic_23</item>
+        <item>@drawable/abc_ic_24</item>
+        <item>@drawable/abc_ic_25</item>
+        <item>@drawable/abc_ic_26</item>
+        <item>@drawable/abc_ic_27</item>
+        <item>@drawable/abc_ic_28</item>
+        <item>@drawable/abc_ic_29</item>
+        <item>@drawable/abc_ic_30</item>
+        <item>@drawable/abc_ic_31</item>
+        <item>@drawable/abc_ic_32</item>
+        <item>@drawable/abc_ic_33</item>
+        <item>@drawable/abc_ic_34</item>
+        <item>@drawable/abc_ic_35</item>
+        <item>@drawable/abc_ic_36</item>
+        <item>@drawable/abc_ic_37</item>
+        <item>@drawable/abc_ic_38</item>
+        <item>@drawable/abc_ic_39</item>
+        <item>@drawable/abc_ic_40</item>
+        <item>@drawable/abc_ic_41</item>
+        <item>@drawable/abc_ic_42</item>
+        <item>@drawable/abc_ic_43</item>
+        <item>@drawable/abc_ic_44</item>
+        <item>@drawable/gradient1</item>
+        <item>@drawable/gradient2</item>
+        <item>@drawable/gradient3</item>
+        <item>@drawable/gradient4</item>
+        <item>@drawable/gradient5</item>
+        <item>@drawable/gradient6</item>
+        <item>@drawable/gradient7</item>
+        <item>@drawable/gradient8</item>
+        <item>@drawable/gradient9</item>
+        <item>@drawable/gradient10</item>
+    </string-array>
+
+</resources>

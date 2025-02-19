@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="GradleMigrationSettings" migrationVersion="1" />
+  <component name="GradleSettings">
+    <option name="linkedExternalProjectsSettings">
+      <GradleProjectSettings>
+        <option name="testRunner" value="CHOOSE_PER_TEST" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="gradleHome" value="C:/android/gradle/gradle-7.3.3" />
+        <option name="gradleJvm" value="#GRADLE_LOCAL_JAVA_HOME" />
+        <option name="modules">
+          <set>
+            <option value="C:/src/Android/vidmaker-102/photomovie" />
+            <option value="C:/src/Android/vidmaker-102/photomovie_ui" />
+            <option value="$PROJECT_DIR$/../01_QuotesPhrases/library" />
+            <option value="$PROJECT_DIR$" />
+            <option value="$PROJECT_DIR$/ChInspirefaith" />
+            <option value="$PROJECT_DIR$/ChristianQuotesEn" />
+            <option value="$PROJECT_DIR$/features" />
+            <option value="$PROJECT_DIR$/features/db_oraritreni" />
+            <option value="$PROJECT_DIR$/features/ui_multiple" />
+            <option value="$PROJECT_DIR$/features/ui_multiple_author" />
+            <option value="$PROJECT_DIR$/features/ui_single" />
+            <option value="$PROJECT_DIR$/lib" />
+            <option value="$PROJECT_DIR$/mylibrary" />
+            <option value="$PROJECT_DIR$/stub" />
+            <option value="$PROJECT_DIR$/type" />
+            <option value="$PROJECT_DIR$/type/type_multiple" />
+            <option value="$PROJECT_DIR$/type/type_multiple_author" />
+            <option value="$PROJECT_DIR$/type/type_single" />
+            <option value="$PROJECT_DIR$/../03_DreamBook/customView" />
+            <option value="$PROJECT_DIR$/../../sdk/android/UI/features/ui" />
+            <option value="$PROJECT_DIR$/../../sdk/android/multithreader/threader" />
+            <option value="$PROJECT_DIR$/../../sdk/android/ui/features/wads" />
+            <option value="$PROJECT_DIR$/../../sdk/android/ui/features/webview" />
+            <option value="$PROJECT_DIR$/../../sdk/android/ui/stub/stub_admob" />
+            <option value="$PROJECT_DIR$/../../sdk/android/ui/stub/stub_appmetrica" />
+            <option value="$PROJECT_DIR$/../../sdk/android/ui/stub/stub_appsflyer" />
+            <option value="$PROJECT_DIR$/../../sdk/android/ui/stub/stub_facebook" />
+            <option value="$PROJECT_DIR$/../../sdk/android/ui/stub/stub_mtracker" />
+            <option value="$PROJECT_DIR$/../../sdk/android/ui/stub/stub_onesignal" />
+          </set>
+        </option>
+        <option name="resolveExternalAnnotations" value="false" />
+      </GradleProjectSettings>
+    </option>
+  </component>
+</project>

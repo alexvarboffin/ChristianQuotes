@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+<!--    <integer-array name="c_title">-->
+<!--        &lt;!&ndash;        <item>@string/_cat_1</item>&ndash;&gt;-->
+<!--    </integer-array>-->
+
+    <string-array name="alphabet">
+        <item>A</item>
+    </string-array>
+</resources>

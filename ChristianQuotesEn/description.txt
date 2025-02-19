@@ -1,0 +1,31 @@
+[1] christmas.txt	totalLines=17, foundLines=17, 
+[2] death.txt	totalLines=199, foundLines=199, 
+[3] disobedience.txt	totalLines=9, foundLines=9, 
+[4] faith.txt	totalLines=200, foundLines=200, 
+[5] faithfulness.txt	totalLines=12, foundLines=12, 
+[6] fear.txt	totalLines=199, foundLines=199, 
+[7] forgiveness.txt	totalLines=60, foundLines=60, 
+[8] friendship.txt	totalLines=47, foundLines=47, 
+[9] grace.txt	totalLines=200, foundLines=200, 
+[10] jesus.txt	totalLines=199, foundLines=199, 
+[11] joy.txt	totalLines=200, foundLines=200, 
+[12] life.txt	totalLines=200, foundLines=200, 
+[13] love.txt	totalLines=200, foundLines=200, 
+[14] marriage.txt	totalLines=35, foundLines=35, 
+[15] PEACE.txt	totalLines=158, foundLines=158, 
+[16] praise.txt	totalLines=89, foundLines=89, 
+[17] prayer.txt	totalLines=200, foundLines=200, 
+[18] resurrection.txt	totalLines=24, foundLines=24, 
+[19] salvation.txt	totalLines=136, foundLines=136, 
+[20] sin.txt	totalLines=200, foundLines=200, 
+[21] singing.txt	totalLines=10, foundLines=10, 
+[22] thanksgiving.txt	totalLines=22, foundLines=22, 
+[23] trust.txt	totalLines=177, foundLines=177, 
+[24] truth.txt	totalLines=198, foundLines=198, 
+[25] wisdom.txt	totalLines=101, foundLines=101, 
+[26] worship.txt	totalLines=104, foundLines=104, 
+================================
+Всего строк для добавления: 3196
+Уникальных строк: 2537
+Повторы блоков: 659
+================================

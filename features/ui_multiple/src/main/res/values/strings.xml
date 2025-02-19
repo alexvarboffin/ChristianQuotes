@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <string name="fileSaved">File Saved</string>
+    <string name="file_saved">File Saved</string>
+
+    <string name="permission_title_needed">Permission needed</string>
+
+    <string name="action_share_text">Share Text</string>
+    <string name="menu_all_categories">All categories</string>
+    <string name="action_share_image">Share Image</string>
+    <string name="share_as_text">Share as Text</string>
+    <string name="copy_to_buffer">Copied to clipboard</string>
+
+    <string name="share_data">Share File</string>
+    <string name="all_data" translatable="false">...</string>
+    <string name="clearAll">Clear all</string>
+    <string name="permission_not_granted">PERMISSION NOT GRANTED</string>
+    <string name="jpg_viewer_not_installed">JPG Viewer Not Installed</string>
+    <string name="action_open">Open</string>
+    <string name="goToList">Go to list</string>
+    <string name="action_previous_quote">Previous quote</string>
+    <string name="action_random_quote">Random quote</string>
+    <string name="action_like">Like</string>
+    <string name="app_watermark" tools:ignore="MissingTranslation">WATERMARK</string>
+    <string name="action_save">Save</string>
+    <string name="action_copy">Copy</string>
+    <string name="action_share_status">Share a quote</string>
+    <string name="action_share">Share</string>
+    <string name="hint_sleep_search">Enter a search word</string>
+
+    <!--<string name="menu_all_categories">Все категории</string>-->
+    <string name="menu_action_random_statuses">Случайная цитата</string>
+    <string name="url_privacy_policy" translatable="false">@null</string>
+    <string name="action_next_quote">Next quote</string>
+    <string name="empty">The list of favorite statuses is empty</string>
+    <string name="share_as_image">Share as Image</string>
+    <string name="permission_ok">Permission OK</string>
+    <string name="permission_not_allow">Permission not allow</string>
+
+
+</resources>

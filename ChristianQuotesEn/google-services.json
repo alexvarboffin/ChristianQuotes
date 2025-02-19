@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "459942535132",
+    "project_id": "christianquotesen",
+    "storage_bucket": "christianquotesen.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:459942535132:android:dd96bf2abedc27b3313919",
+        "android_client_info": {
+          "package_name": "com.christianquotestoinspire.bibleverses.motivation"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA9CwwryUnpPhF0A2k5SGO0urss3Fq8nDI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

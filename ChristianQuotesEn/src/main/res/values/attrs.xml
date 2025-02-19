@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <declare-styleable name="Diary">
+    <attr name="pref_about" format="reference" />
+    <attr name="pref_calendar" format="reference" />
+    <attr name="pref_copy_media" format="reference" />
+    <attr name="pref_dark_theme" format="reference" />
+    <attr name="pref_external" format="reference" />
+    <attr name="pref_folder" format="reference" />
+    <attr name="pref_index_page" format="reference" />
+    <attr name="pref_markdown" format="reference" />
+    <attr name="pref_use_index" format="reference" />
+  </declare-styleable>
+
+  <declare-styleable name="GlitchTextEffect">
+    <attr name="text" format="string"/>
+    <attr name="textSize" format="integer"/>
+    <attr name="textColors" format="reference"/>
+    <attr name="noise" format="integer" />
+    <attr name="fontLocation" format="string" />
+    <attr name="speed" format="integer" />
+  </declare-styleable>
+
+</resources>

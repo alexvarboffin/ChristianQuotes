@@ -1,0 +1,118 @@
+<resources xmlns:tools="http://schemas.android.com/tools" tools:ignore="MissingTranslation">
+<!--    Цитаты великих людей - Христианские цитаты-->
+<!--    Цитаты Веры
+Духовные Христианские Цитаты
+Глубокие Христианские Цитаты
+Цитаты Веры Христианские Цитаты-->
+
+<!--    <string name="app_name_old">Христианские цитаты</string>-->
+<!--    <string name="app_watermark_old">Христианские цитаты</string>-->
+
+    <string name="app_name">Мудрые цитаты</string>
+    <string name="app_watermark">Духовные Цитаты</string>
+
+    <string name="nav_header_desc">111111</string>
+    <string name="nav_header_subtitle">1111112222222</string>
+    <string name="hint_sleep_search">11111</string>
+
+    <string name="abc_cat_0">Цитаты из библии</string>
+    <string name="abc_cat_1">Атеизм</string>
+    <string name="abc_cat_2">Бедность</string>
+    <string name="abc_cat_3">Библия</string>
+    <string name="abc_cat_4">Благовестие</string>
+    <string name="abc_cat_5">Благодарность</string>
+    <string name="abc_cat_6">Благодать</string>
+    <string name="abc_cat_7">Благословения</string>
+    <string name="abc_cat_8">Благотворительность</string>
+    <string name="abc_cat_9">Ближний</string>
+    <string name="abc_cat_10">Божья воля</string>
+    <string name="abc_cat_11">Божья защита</string>
+    <string name="abc_cat_12">Брак</string>
+    <string name="abc_cat_13">Вежливость</string>
+    <string name="abc_cat_14">Вера</string>
+    <string name="abc_cat_15">Вечная жизнь</string>
+    <string name="abc_cat_16">Всеведенье Божье</string>
+    <string name="abc_cat_17">Второе пришествие</string>
+    <string name="abc_cat_18">Глупость</string>
+    <string name="abc_cat_19">Гнев</string>
+    <string name="abc_cat_20">Гордость</string>
+    <string name="abc_cat_21">Грех</string>
+    <string name="abc_cat_22">Дело</string>
+    <string name="abc_cat_23">Деньги</string>
+    <string name="abc_cat_24">Добро и зло</string>
+    <string name="abc_cat_25">Духовность</string>
+    <string name="abc_cat_26">Духовный рост</string>
+    <string name="abc_cat_27">Ересь</string>
+    <string name="abc_cat_28">Жертва</string>
+    <string name="abc_cat_29">Жизнь</string>
+    <string name="abc_cat_30">Знания</string>
+    <string name="abc_cat_31">Идолопоклонство</string>
+    <string name="abc_cat_32">Испытания</string>
+    <string name="abc_cat_33">Конец света</string>
+    <string name="abc_cat_34">Кротость</string>
+    <string name="abc_cat_35">Лень</string>
+    <string name="abc_cat_36">Любовь</string>
+    <string name="abc_cat_37">Молитва</string>
+    <string name="abc_cat_38">Мудрость</string>
+    <string name="abc_cat_39">Надежда</string>
+    <string name="abc_cat_40">Небесное и земное</string>
+    <string name="abc_cat_41">Ненависть</string>
+    <string name="abc_cat_42">Обида</string>
+    <string name="abc_cat_43">Ошибки</string>
+    <string name="abc_cat_44">Помощь от Бога</string>
+    <string name="abc_cat_45">Посредник</string>
+    <string name="abc_cat_46">Праведность</string>
+    <string name="abc_cat_47">Предательство</string>
+    <string name="abc_cat_48">Приближение к Богу</string>
+    <string name="abc_cat_49">Природа</string>
+    <string name="abc_cat_50">Прославление</string>
+    <string name="abc_cat_51">Радость</string>
+    <string name="abc_cat_52">Религиозность</string>
+    <string name="abc_cat_53">Рождество</string>
+    <string name="abc_cat_54">Свобода</string>
+    <string name="abc_cat_55">Семья</string>
+    <string name="abc_cat_56">Сила от Бога</string>
+    <string name="abc_cat_57">Слава</string>
+    <string name="abc_cat_58">Слово</string>
+    <string name="abc_cat_59">Служение Богу</string>
+    <string name="abc_cat_60">Смерть</string>
+    <string name="abc_cat_61">Смирение</string>
+    <string name="abc_cat_62">Соблазн</string>
+    <string name="abc_cat_63">Совесть</string>
+    <string name="abc_cat_64">Создатель</string>
+    <string name="abc_cat_65">Спасение</string>
+    <string name="abc_cat_66">Сплетни</string>
+    <string name="abc_cat_67">Ссоры</string>
+    <string name="abc_cat_68">Старость</string>
+    <string name="abc_cat_69">Страдания</string>
+    <string name="abc_cat_70">Страх</string>
+    <string name="abc_cat_71">Трудолюбие</string>
+    <string name="abc_cat_72">Ум</string>
+    <string name="abc_cat_73">Характер</string>
+    <string name="abc_cat_74">Христианство</string>
+    <string name="abc_cat_75">Христос</string>
+    <string name="abc_cat_76">Церковь</string>
+
+
+    <string name="menu_all_categories">Все категории</string>
+    <string name="menu_favorite_statuses">Избранные цитаты</string>
+
+    <string name="action_save">Сохранить</string>
+    <string name="action_like">Нравится</string>
+    <string name="action_copy">Копировать</string>
+    <string name="action_share">Поделиться</string>
+
+
+    <string name="saved">Сохранено</string>
+    <string name="copy_to_buffer">Скопировано в буффер обмена</string>
+
+    <string name="action_share_text">Поделиться текстом</string>
+    <string name="action_share_image">Поделиться картинкой</string>
+    <string name="empty">Список избранных цитат пуст</string>
+    <string name="all_data">…</string>
+
+    <string name="yt_share_description" tools:ignore="MissingTranslation">%1$s\n\nDownload our "Christian Quotes" app
+        \n🌟 "Christian Quotes" 🌟
+        \n🔗 Google Play: https://bit.ly/3SpWX5r
+\n\n%2$s\n\n\nYour Queries:\n%3$s</string>
+</resources>

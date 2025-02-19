@@ -1,0 +1,48 @@
+plugins {
+    alias(libs.plugins.android.library)
+    id("com.google.devtools.ksp")
+    alias(libs.plugins.kotlin.android)
+}
+
+android {
+    namespace = "com.walhalla.typemultiple"
+    compileSdk = 35
+
+    defaultConfig {
+        minSdk = rootProject.extra["minSdkVersion0"].toString().toInt()
+        targetSdk = rootProject.extra["targetSdkVersion0"].toString().toInt()
+        consumerProguardFiles("consumer-rules.pro")
+    }
+
+    buildTypes {
+        getByName("release") {
+            isMinifyEnabled = false
+            proguardFiles(
+                    getDefaultProguardFile("proguard-android-optimize.txt"),
+                    "proguard-rules.pro"
+            )
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility = JavaVersion.VERSION_17
+        targetCompatibility = JavaVersion.VERSION_17
+    }
+    kotlinOptions {
+        jvmTarget = "17"
+    }
+}
+
+dependencies {
+    implementation(libs.androidx.appcompat)
+    implementation(libs.material)
+    implementation(project(":threader"))
+    implementation (project(":library"))
+    implementation(project(":features:ui"))
+    implementation(project(":features:db_oraritreni"))
+
+    implementation(libs.androidx.room.runtime)
+    implementation(libs.androidx.core.ktx)
+    annotationProcessor("androidx.room:room-compiler:$rootProject.roomVersion")
+    ksp("androidx.room:room-compiler:$rootProject.roomVersion")
+}

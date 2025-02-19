@@ -1,0 +1,75 @@
+<resources xmlns:tools="http://schemas.android.com/tools" tools:ignore="MissingTranslation">
+<!--    Цитаты великих людей - Христианские цитаты-->
+<!--    Цитаты Веры
+Духовные Христианские Цитаты
+Глубокие Христианские Цитаты
+Цитаты Веры Христианские Цитаты-->
+
+<!--    <string name="app_name_old">Христианские цитаты</string>-->
+<!--    <string name="app_watermark_old">Христианские цитаты</string>-->
+
+    <string name="app_name">Christian Quotes</string>
+    <string name="app_watermark">Christian Quotes</string>
+
+    <string name="nav_header_desc">111111</string>
+    <string name="nav_header_subtitle">1111112222222</string>
+    <string name="hint_sleep_search">11111</string>
+
+
+<!--    most popular search-->
+    <string name="abc_cat_0">Christmas</string>
+    <string name="abc_cat_1">Death</string>
+    <string name="abc_cat_2">Disobedience</string>
+    <string name="abc_cat_3">Faith</string>
+    <string name="abc_cat_4">Faithfulness</string>
+    <string name="abc_cat_5">Fear</string>
+    <string name="abc_cat_6">Forgiveness</string>
+    <string name="abc_cat_7">Friendship</string>
+    <string name="abc_cat_8">Grace</string>
+    <string name="abc_cat_9">Jesus</string>
+    <string name="abc_cat_10">Joy</string>
+    <string name="abc_cat_11">Life</string>
+    <string name="abc_cat_12">Love</string>
+    <string name="abc_cat_13">Marriage</string>
+    <string name="abc_cat_14">Peace</string>
+    <string name="abc_cat_15">Praise</string>
+    <string name="abc_cat_16">Prayer</string>
+    <string name="abc_cat_17">Resurrection</string>
+    <string name="abc_cat_18">Salvation</string>
+    <string name="abc_cat_19">Sin</string>
+    <string name="abc_cat_20">Singing</string>
+    <string name="abc_cat_21">Thanksgiving</string>
+    <string name="abc_cat_22">Trust</string>
+    <string name="abc_cat_23">Truth</string>
+    <string name="abc_cat_24">Wisdom</string>
+    <string name="abc_cat_25">Worship</string>
+
+    <string name="action_share_status">Share quote</string>
+
+
+    <string name="action_save">Save</string>
+    <string name="action_copy">Copy</string>
+    <string name="action_like">Like</string>
+    <string name="action_share">Share</string>
+
+    <string name="saved">Saved</string>
+    <string name="copy_to_buffer">Copied to clipboard</string>
+
+    <string name="action_share_text">Share Text</string>
+    <string name="action_share_image">Share Image</string>
+    <string name="share_as_text">Share as Text</string>
+
+    <string name="empty">The list of favorite statuses is empty</string>
+    <string name="all_data">…</string>
+    <string name="most_popular_searches">Most Popular Searches</string>
+    <string name="menu_all_categories">All categories</string>
+    <string name="menu_favorite_statuses">Favorite Quotes</string>
+    <string name="menu_action_random_statuses">Random quote</string>
+
+
+    <string name="yt_share_description" tools:ignore="MissingTranslation">%1$s\n\nDownload our "Christian Quotes" app
+        \n🌟 "Christian Quotes" 🌟
+        \n🔗 Google Play: https://bit.ly/3SlsHsc
+\n\n%2$s\n\n\nYour Queries:\n%3$s</string>
+
+</resources>

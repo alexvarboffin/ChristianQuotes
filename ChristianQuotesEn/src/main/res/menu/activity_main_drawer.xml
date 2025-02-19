@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <item
+        android:id="@+id/action_my_dreams"
+        android:icon="@drawable/ic_statuses"
+        android:title="@string/menu_all_categories" />
+    <item
+        android:id="@+id/action_all_authors"
+        android:icon="@drawable/ic_statuses"
+        android:title="@string/menu_all_authors" />
+
+    <item
+        android:id="@+id/action_favorite_statuses"
+        android:icon="@drawable/ic_favorite_red"
+        android:title="@string/menu_favorite_statuses" />
+
+    <item
+        android:id="@+id/action_random_statuses"
+        android:icon="@drawable/ic_random_status"
+        android:title="@string/menu_action_random_statuses" />
+<!--    app:actionLayout="@layout/your_custom_menu_item_layout"-->
+<!--    app:actionProviderClass="androidx.appcompat.widget.ShareActionProvider"-->
+<!--    android:theme="@style/YourMenuItemTheme"-->
+
+<!--    <group android:id="@+id/group1" android:checkableBehavior="single">-->
+<!--        <item-->
+<!--            android:id="@+id/menu_most_popular"-->
+<!--            android:icon="@drawable/ic_popular_search"-->
+<!--            android:title="@string/most_popular_searches">-->
+<!--            <menu />-->
+<!--        </item>-->
+<!--    </group>-->
+
+    <item
+        android:id="@+id/menu_most_popular"
+        android:icon="@drawable/ic_popular_search"
+        android:title="@string/most_popular_searches">
+        <menu />
+    </item>
+</menu>

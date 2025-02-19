@@ -1,0 +1,59 @@
+<resources>
+
+    <style name="Widget.Theme.Statuses.Alphabetik" parent="">
+        <item name="android:background">@color/gray_400</item>
+        <!--<item name="exampleColor">@color/light_blue_400</item>-->
+    </style>
+
+    <style name="Widget.Theme.Statuses.MyView" parent="">
+        <item name="android:background">@color/gray_400</item>
+        <item name="exampleColor">@color/light_blue_400</item>
+    </style>
+
+    <style name="AppTheme.H1" parent="TextAppearance.AppCompat.Large">
+        <item name="android:textColor">#000000</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="AppTheme.H2" parent="TextAppearance.AppCompat.Medium">
+        <item name="android:textColor">#0C0C0C</item>
+        <item name="android:textStyle">italic</item>
+    </style>
+    <!--    parent="TextAppearance.AppCompat.Medium"-->
+    <style name="AppTheme.Description">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">#2B2929</item>
+    </style>
+
+
+
+    <style name="AppTheme.Control" parent="TextAppearance.AppCompat.Small">
+        <item name="android:textColor">#000000</item>
+<!--        <item name="android:background">#333</item>-->
+        <item name="android:textSize">12sp</item>
+        <!--        <item name="android:textStyle">bold</item>-->
+    </style>
+
+    <style name="StatusCardText" parent="Widget.AppCompat.TextView">
+        <item name="android:textSize">22sp</item>
+        <item name="android:fontFamily">@font/oswald_regular</item>
+    </style>
+
+    <style name="YourMenuItemTheme">
+        <item name="android:textColor">#FFFFFF</item>
+    </style>
+
+
+    <style name="DrawerGroupStyle" parent="Widget.Design.NavigationView">
+        <!--        <item name="android:background">#000000</item>-->
+        <item name="android:textColor">#FFFFFF</item>
+        <item name="android:itemBackground">@drawable/nav_drawer_item_selector</item>
+        <item name="itemBackground">@drawable/nav_drawer_item_selector</item>
+        <item name="itemTextColor">#FFFFFF</item>
+        <item name="iconTint">@android:color/white</item>
+
+<!--        <item name="titleTextColor">#FF0000</item>-->
+<!--        <item name="actionMenuTextColor">#FF0000</item>-->
+    </style>
+
+</resources>
