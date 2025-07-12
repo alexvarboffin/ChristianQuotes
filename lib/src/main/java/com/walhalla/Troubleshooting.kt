@@ -1,29 +1,25 @@
-package com.walhalla;
+package com.walhalla
 
-import android.content.Context;
-import android.content.Intent;
-import android.os.Environment;
+import android.content.Context
+import android.os.Environment
+import com.walhalla.ui.DLog.d
+import java.io.File
+import java.util.Locale
 
-import com.walhalla.ui.DLog;
+object Troubleshooting {
 
-import java.io.File;
-import java.util.Locale;
-
-public class Troubleshooting {
-
-    public static File defLocation(Context context) {
-        File aa = context.getExternalFilesDir(Environment.DIRECTORY_PICTURES);
-        DLog.d("@@@" + aa);
-        return aa;
+    fun defLocation(context: Context): File? {
+        val aa = context.getExternalFilesDir(Environment.DIRECTORY_PICTURES)
+        d("@@@" + aa)
+        return aa
     }
 
     //below 29 api
-    public static File withoutFileStore(Context context) {
-        File sdCard = Environment.getExternalStorageDirectory();
-        File directory = new File(sdCard, "Latest_quotes");
-        boolean tmp = directory.mkdir();
-        String filename = String.format(Locale.getDefault(), "%d.jpg", System.currentTimeMillis());
-        return new File(directory, filename);
+    fun withoutFileStore(context: Context): File {
+        val sdCard = Environment.getExternalStorageDirectory()
+        val directory = File(sdCard, "Latest_quotes")
+        val tmp = directory.mkdir()
+        val filename = String.format(Locale.getDefault(), "%d.jpg", System.currentTimeMillis())
+        return File(directory, filename)
     }
-
 }

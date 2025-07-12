@@ -10,8 +10,13 @@
         <option name="gradleJvm" value="#GRADLE_LOCAL_JAVA_HOME" />
         <option name="modules">
           <set>
-            <option value="C:/src/Android/vidmaker-102/photomovie" />
-            <option value="C:/src/Android/vidmaker-102/photomovie_ui" />
+            <option value="C:/src/Synced/WalhallaUI/features/permissionResolver" />
+            <option value="C:/src/Synced/WalhallaUI/features/ui" />
+            <option value="C:/src/Synced/WalhallaUI/features/vidmaker-102/photomovie" />
+            <option value="C:/src/Synced/WalhallaUI/features/vidmaker-102/photomovie_ui" />
+            <option value="C:/src/Synced/WalhallaUI/features/wads" />
+            <option value="C:/src/Synced/WalhallaUI/features/webview" />
+            <option value="C:/src/Synced/WalhallaUI/shared" />
             <option value="$PROJECT_DIR$/../01_QuotesPhrases/library" />
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/ChInspirefaith" />
@@ -29,10 +34,7 @@
             <option value="$PROJECT_DIR$/type/type_multiple_author" />
             <option value="$PROJECT_DIR$/type/type_single" />
             <option value="$PROJECT_DIR$/../03_DreamBook/customView" />
-            <option value="$PROJECT_DIR$/../../sdk/android/UI/features/ui" />
             <option value="$PROJECT_DIR$/../../sdk/android/multithreader/threader" />
-            <option value="$PROJECT_DIR$/../../sdk/android/ui/features/wads" />
-            <option value="$PROJECT_DIR$/../../sdk/android/ui/features/webview" />
             <option value="$PROJECT_DIR$/../../sdk/android/ui/stub/stub_admob" />
             <option value="$PROJECT_DIR$/../../sdk/android/ui/stub/stub_appmetrica" />
             <option value="$PROJECT_DIR$/../../sdk/android/ui/stub/stub_appsflyer" />
@@ -41,7 +43,6 @@
             <option value="$PROJECT_DIR$/../../sdk/android/ui/stub/stub_onesignal" />
           </set>
         </option>
-        <option name="resolveExternalAnnotations" value="false" />
       </GradleProjectSettings>
     </option>
   </component>

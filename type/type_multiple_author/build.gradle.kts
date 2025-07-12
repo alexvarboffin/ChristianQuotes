@@ -1,27 +1,24 @@
 plugins {
     alias(libs.plugins.android.library)
-    id("com.google.devtools.ksp")
     alias(libs.plugins.kotlin.android)
 }
 
 android {
-    namespace = "com.google.android.justintrain_oraritreni"
+    namespace = "com.walhalla.typemultiple"
     compileSdk = libs.versions.android.compileSdk.get().toInt()
 
     defaultConfig {
-        minSdk = rootProject.extra["minSdkVersion0"].toString().toInt()
-        targetSdk = rootProject.extra["targetSdkVersion0"].toString().toInt()
-
-        testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
-        consumerProguardFiles("consumer-rules.pro")
+        minSdk = libs.versions.android.minSdk.get().toInt()
+        targetSdk = libs.versions.android.targetSdk.get().toInt()
+        consumerProguardFiles.add(file("consumer-rules.pro"))
     }
 
     buildTypes {
         getByName("release") {
             isMinifyEnabled = false
             proguardFiles(
-                getDefaultProguardFile("proguard-android-optimize.txt"),
-                "proguard-rules.pro"
+                    getDefaultProguardFile("proguard-android-optimize.txt"),
+                    "proguard-rules.pro"
             )
         }
     }
@@ -30,17 +27,21 @@ android {
         sourceCompatibility = JavaVersion.VERSION_17
         targetCompatibility = JavaVersion.VERSION_17
     }
+
     kotlinOptions {
         jvmTarget = "17"
     }
 }
 
 dependencies {
-
-    annotationProcessor(libs.androidx.room.compiler)
     implementation(libs.androidx.appcompat)
+    implementation(libs.material)
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.room.runtime)
-    implementation(libs.material)
-    ksp(libs.androidx.room.compiler)
+    annotationProcessor(libs.androidx.room.compiler)
+
+    implementation(project(":threader"))
+    implementation(project(":library"))
+    implementation(project(":features:ui"))
+    implementation(project(":features:db_oraritreni"))
 }

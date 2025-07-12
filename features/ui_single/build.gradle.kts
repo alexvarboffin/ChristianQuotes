@@ -1,17 +1,24 @@
 plugins {
     alias(libs.plugins.android.library)
-    id("com.google.devtools.ksp")
     alias(libs.plugins.kotlin.android)
 }
 
 android {
-    namespace = "com.walhalla.typemultiple"
+    namespace = "com.walhalla.uisingle"
     compileSdk = libs.versions.android.compileSdk.get().toInt()
 
+    buildFeatures {
+        viewBinding = true
+        buildConfig = true
+        // dataBinding = true  // Uncomment if needed
+    }
+
     defaultConfig {
-        minSdk = rootProject.extra["minSdkVersion0"].toString().toInt()
-        targetSdk = rootProject.extra["targetSdkVersion0"].toString().toInt()
-        consumerProguardFiles("consumer-rules.pro")
+        minSdk = libs.versions.android.minSdk.get().toInt()
+        targetSdk = libs.versions.android.targetSdk.get().toInt()
+
+        testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
+        consumerProguardFiles.add(file("consumer-rules.pro"))
     }
 
     buildTypes {
@@ -28,6 +35,7 @@ android {
         sourceCompatibility = JavaVersion.VERSION_17
         targetCompatibility = JavaVersion.VERSION_17
     }
+
     kotlinOptions {
         jvmTarget = "17"
     }
@@ -36,13 +44,14 @@ android {
 dependencies {
     implementation(libs.androidx.appcompat)
     implementation(libs.material)
-    implementation(project(":threader"))
-    implementation (project(":library"))
-    implementation(project(":features:ui"))
-    implementation(project(":features:db_oraritreni"))
-
-    implementation(libs.androidx.room.runtime)
     implementation(libs.androidx.core.ktx)
-    //annotationProcessor(libs.androidx.room.compiler)
-    ksp(libs.androidx.room.compiler)
+    implementation(libs.androidx.room.runtime)
+    annotationProcessor(libs.androidx.room.compiler)
+
+    implementation(project(":features:ui"))
+    implementation(project(":threader"))
+    implementation(project(":library"))
+    implementation(project(":features:db_oraritreni"))
+    implementation(project(":type:type_single"))
+    implementation(project(":customView"))
 }
