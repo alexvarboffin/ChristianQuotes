@@ -53,8 +53,7 @@
             android:layout_height="wrap_content"
             android:layout_alignParentBottom="true"
             android:layout_centerHorizontal="true"
-            android:background="#FFFFFF"
-            android:paddingBottom="8dp" />
+            android:visibility="gone" />
 
     </RelativeLayout>
 

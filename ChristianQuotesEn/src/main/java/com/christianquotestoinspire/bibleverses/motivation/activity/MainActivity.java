@@ -19,7 +19,10 @@ import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.graphics.Insets;
 import androidx.core.view.GravityCompat;
+import androidx.core.view.ViewCompat;
+import androidx.core.view.WindowInsetsCompat;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 
@@ -78,6 +81,13 @@ public class MainActivity extends
             DLog.d(message.getClass().getName() + " --> " + message.hashCode());
 
             if (content != null) {
+                content.setVisibility(View.VISIBLE);
+                ViewCompat.setOnApplyWindowInsetsListener(content, (v, windowInsets) -> {
+                    Insets navBars = windowInsets.getInsets(WindowInsetsCompat.Type.navigationBars());
+                    v.setPadding(0, 0, 0, navBars.bottom);
+                    return windowInsets;
+                });
+                ViewCompat.requestApplyInsets(content);
                 try {
                     //content.removeView(message);
                     if (message.getParent() != null) {
@@ -111,6 +121,9 @@ public class MainActivity extends
         @Override
         public void onRetrievalFailed(String error) {
             DLog.d("---->" + error);
+            if (content != null) {
+                content.setVisibility(View.GONE);
+            }
         }
     };
 
