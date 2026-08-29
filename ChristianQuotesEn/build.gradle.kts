@@ -47,7 +47,7 @@ android {
         create("x") {
             storeFile = file(keystoreProperties["storeFile"].toString())
             storePassword = keystoreProperties["storePassword"].toString()
-            keyAlias = keystoreProperties["keyAliasRU"].toString()
+            keyAlias = keystoreProperties["keyAliasEN"].toString()
             keyPassword = keystoreProperties["keyPassword"].toString()
         }
     }
