@@ -1,5 +1,6 @@
 package com.christianquotes.inspirefaith
 
+import androidx.appcompat.app.AppCompatDelegate
 import androidx.multidex.MultiDexApplication
 import com.google.android.gms.ads.AdRequest
 import com.google.android.gms.ads.MobileAds
@@ -19,6 +20,7 @@ class MyApp : MultiDexApplication() {
 
 
     override fun onCreate() {
+        AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
         super.onCreate()
 
         val testDevices: MutableList<String> = ArrayList()
@@ -73,11 +75,11 @@ class MyApp : MultiDexApplication() {
             getString(R.string.admob_reward_ad_id)
         )
 
-        val w = AdvertManager.getInstance()
+        val w = AdvertManager.getInstance0()
         w.init(m0)
 
-        val z: RewardManager = RewardManager.getInstance()
-        z.init(m0)
+        val z: RewardManager? = RewardManager.instance
+        z?.init(m0)
         //End
     }
 

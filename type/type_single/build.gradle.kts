@@ -1,6 +1,8 @@
 plugins {
     alias(libs.plugins.android.library)
     alias(libs.plugins.kotlin.android)
+    alias(libs.plugins.kotlin.kapt)
+    id("com.google.devtools.ksp")
 }
 
 android {
@@ -38,10 +40,10 @@ dependencies {
     implementation(libs.material)
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.room.runtime)
-    annotationProcessor(libs.androidx.room.compiler)
+    ksp(libs.androidx.room.compiler)
 
     implementation(project(":threader"))
     implementation(project(":library"))
-    implementation(project(":features:ui"))
-    implementation(project(":features:db_oraritreni"))
+    implementation(project(":ui"))
+    implementation(project(":db_oraritreni"))
 }

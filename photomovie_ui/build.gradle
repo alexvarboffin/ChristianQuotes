@@ -34,7 +34,7 @@ android {
 dependencies {
     implementation "androidx.appcompat:appcompat:$rootProject.compatVersion"
     implementation "com.google.android.material:material:$rootProject.materialVersion"
-//implementation(project(":features:ui"))
+//implementation(project(":ui"))
 //implementation fileTree(dir: 'libs', include: ['*.jar'])
 //implementation 'androidx.appcompat:appcompat:1.2.0-alpha01'
 //    testImplementation 'junit:junit:4.13'

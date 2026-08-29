@@ -6,7 +6,7 @@
       <GradleProjectSettings>
         <option name="testRunner" value="CHOOSE_PER_TEST" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="gradleHome" value="C:/android/gradle/gradle-7.3.3" />
+        <option name="gradleHome" value="C:\android\gradle\gradle-7.3.3" />
         <option name="gradleJvm" value="#GRADLE_LOCAL_JAVA_HOME" />
         <option name="modules">
           <set>
@@ -17,7 +17,6 @@
             <option value="C:/src/Synced/WalhallaUI/features/wads" />
             <option value="C:/src/Synced/WalhallaUI/features/webview" />
             <option value="C:/src/Synced/WalhallaUI/shared" />
-            <option value="$PROJECT_DIR$/../01_QuotesPhrases/library" />
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/ChInspirefaith" />
             <option value="$PROJECT_DIR$/ChristianQuotesEn" />
@@ -33,6 +32,7 @@
             <option value="$PROJECT_DIR$/type/type_multiple" />
             <option value="$PROJECT_DIR$/type/type_multiple_author" />
             <option value="$PROJECT_DIR$/type/type_single" />
+            <option value="$PROJECT_DIR$/../01_QuotesPhrases/library" />
             <option value="$PROJECT_DIR$/../03_DreamBook/customView" />
             <option value="$PROJECT_DIR$/../../sdk/android/multithreader/threader" />
             <option value="$PROJECT_DIR$/../../sdk/android/ui/stub/stub_admob" />

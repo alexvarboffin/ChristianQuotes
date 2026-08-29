@@ -19,7 +19,7 @@ val keystoreProperties = Properties().apply {
 
 android {
     compileSdk = libs.versions.android.compileSdk.get().toInt()
-    buildToolsVersion = rootProject.extra["buildToolsVersion0"].toString()
+    buildToolsVersion = libs.versions.android.buildTools.get()
 
     val versionPropsFile = file("version.properties")
 
@@ -30,8 +30,8 @@ android {
             resConfigs("ru", "uk", "en")
             multiDexEnabled = true
             applicationId = "com.christianquotestoinspire.bibleverses.motivation"
-            minSdk = rootProject.extra["minSdkVersion0"].toString().toInt()
-            targetSdk = rootProject.extra["targetSdkVersion0"].toString().toInt()
+            minSdk = libs.versions.android.minSdk.get().toInt()
+            targetSdk = libs.versions.android.targetSdk.get().toInt()
             versionCode = code
             versionName = "1.2.$code"
             setProperty("archivesBaseName", "ChristianQuotesEn")

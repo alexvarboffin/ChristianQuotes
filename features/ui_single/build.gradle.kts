@@ -48,10 +48,10 @@ dependencies {
     implementation(libs.androidx.room.runtime)
     annotationProcessor(libs.androidx.room.compiler)
 
-    implementation(project(":features:ui"))
+    implementation(project(":ui"))
     implementation(project(":threader"))
     implementation(project(":library"))
-    implementation(project(":features:db_oraritreni"))
+    implementation(project(":db_oraritreni"))
     implementation(project(":type:type_single"))
     implementation(project(":customView"))
 }

@@ -1,4 +1,4 @@
-package com.christianquotestoinspire.bibleverses.motivation.fragment
+package com.christianquotes.inspirefaith.fragment
 
 import android.graphics.Bitmap
 import android.os.Bundle
@@ -7,12 +7,10 @@ import android.text.TextUtils
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
-import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.res.ResourcesCompat
 import androidx.fragment.app.FragmentActivity
-import com.christianquotestoinspire.bibleverses.motivation.BitmapUtils
-import com.christianquotestoinspire.bibleverses.motivation.Const
-import com.christianquotestoinspire.bibleverses.motivation.R
+import com.christianquotes.inspirefaith.Const
+import com.christianquotes.inspirefaith.R
 import com.like.LikeButton
 import com.like.OnLikeListener
 import com.walhalla.boilerplate.domain.executor.impl.ThreadExecutor
@@ -24,18 +22,13 @@ import com.walhalla.core.fragment.R_F
 import com.walhalla.core.mvp.presenter.RandomPresenter
 import com.walhalla.core.mvp.view.RandomView
 import com.walhalla.core.utils.MainUtils
-import com.walhalla.core.utils.QTextUtils
 
-class RandomFragment : R_F(), RandomView<Status>, OnLikeListener {
+class RandomFragment : R_F(), RandomView<Status?> {
+    private var status: Status? = null
+    //private val titles: Array<String>?
 
-    //    MyProject myProject = MyProjectsHandler.christQuotesEn;
-    //    TelegramClient[] client = MyProjectsHandler.christianQuotesIdeas_telegramClient;
-
-    private var status0: Status? = null
-    private var titles: Array<String>? = null
-
-    private var presenter: RandomPresenter<Status>? = null
-    private var bitmap: Bitmap? = null
+    private var presenter: RandomPresenter<Status?>? = null
+    private val bitmap: Bitmap? = null
 
 
     override fun tryOpenVideoMaker0(parent: ViewGroup) {
@@ -53,19 +46,20 @@ class RandomFragment : R_F(), RandomView<Status>, OnLikeListener {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         //titles = getResources().getStringArray(R.array.c_title);
-        val db = LocalDatabaseRepo.getDatabase(
-            activity, getString(R.string.abc_d_name)
-        )
+        val db = LocalDatabaseRepo.getDatabase(activity, getString(R.string.abc_d_name))
         val interactor = DataInteractorImpl(
-            ThreadExecutor.getInstance(), MainThreadImpl.getInstance(), db.statusDao(), db.categoryDao()
+            ThreadExecutor.getInstance(),
+            MainThreadImpl.getInstance(),
+            db.statusDao(),
+            db.categoryDao()
         )
         val handler = Handler()
-        presenter = RandomPresenter(
-            activity as AppCompatActivity,
+        presenter = RandomPresenter<Status?>(
+            (activity as androidx.appcompat.app.AppCompatActivity),
             this,
             interactor,
             handler,
-            fileNamePrefix(),
+            fileNamePrefix()!!,
             requestPermissionLauncher,
             storageActivityResultLauncher,
             requestVideoMakerPermissionLauncher
@@ -77,44 +71,49 @@ class RandomFragment : R_F(), RandomView<Status>, OnLikeListener {
         super.onViewCreated(view, savedInstanceState)
         //fontQuote = Typeface.createFromAsset(getActivity().getAssets(), "fonts/oswald_regular.ttf");
         this.fontQuote = ResourcesCompat.getFont(requireActivity(), R.font.oswald_regular)
-        favBtn.setOnLikeListener(this)
-        //if (!BuildConfig.DEBUG) {
+        this.favBtn.setOnLikeListener(object : OnLikeListener {
+            override fun liked(button: LikeButton?) {
+                if (status != null) {
+                    status!!.setLiked()
+                    presenter!!.updateStatus(status)
+                }
+            }
+
+            override fun unLiked(button: LikeButton?) {
+                if (status != null) {
+                    status!!.setDisLiked()
+                    presenter!!.updateStatus(status)
+                }
+            }
+        })
         presenter!!.selectOne()
-        //}
     }
 
     override fun onSave(activity: FragmentActivity, parent: ViewGroup) {
         presenter!!.saveQuotesLikeImage(activity, parent)
     }
 
-    override fun onResume() {
-        super.onResume()
-        //        if (BuildConfig.DEBUG) {
-//            presenter.selectNewRandom();
-//        }
-    }
-
     override fun openVideoMaker(watermark: TextView, tools: ViewGroup, parent: ViewGroup) {
         presenter!!.tryOpenVideoMaker0(watermark, tools, parent)
     }
-
 
     override fun onClickHandler(view: View) {
         presenter!!.onClickHandler(view)
     }
 
-    override fun fileNamePrefix(): String {
-        return Const.PREFIX_NAME
-    }
 
-    override fun isEnableWatermark(): Boolean {
-        return Const.ENABLE_WATERMARK
+    override fun fileNamePrefix(): String? {
+        return Const.PREFIX_NAME
     }
 
     //    @Override
     //    protected void presenter_makeSaved0(Bitmap bitmap) {
     //        presenter.fileSavedEvent(getActivity(), bitmap);
     //    }
+    override fun isEnableWatermark(): Boolean {
+        return Const.ENABLE_WATERMARK
+    }
+
     override fun showWatermark() {
         showWatermark(watermark, tools)
     }
@@ -124,17 +123,15 @@ class RandomFragment : R_F(), RandomView<Status>, OnLikeListener {
     }
 
 
-    override fun bindStatus(status0: Status) {
-        this.status0 = status0
-        textView2.text = String.format(
-            "%1\$s", this.status0!!.text
-        )
-        textView2.typeface = this.fontQuote
+    override fun bindStatus(status0: Status?) {
+        this.status = status0
+        this.textView2.text = String.format("%1\$s", this.status!!.text)
+        this.textView2.setTypeface(this.fontQuote)
 
-        if (!TextUtils.isEmpty(this.status0!!.author)) {
-            val raw0 = "— " + this.status0!!.author
-            author.visibility = View.VISIBLE
-            author.text = raw0
+        if (!TextUtils.isEmpty(this.status!!.author)) {
+            val raw0 = "— " + this.status!!.author
+            this.author.visibility = View.VISIBLE
+            this.author.text = raw0
         }
 
         //        try {
@@ -159,11 +156,12 @@ class RandomFragment : R_F(), RandomView<Status>, OnLikeListener {
         //this.share.setOnClickListener(v -> callback.onShareClick(status));
 //        this.share_iv.setOnClickListener(v -> callback.onShareClick(status));
 //        this.share_tv.setOnClickListener(v -> callback.onShareClick(status));
-        llQuoteShare.setOnClickListener { v: View? -> popup(this.status0) }
+        llQuoteShare.setOnClickListener { v: View? -> popup(status) }
         //copy button
         llCopyQuote.setOnClickListener { v: View? ->
             MainUtils.copyStatus(
-                activity, this.status0!!.text
+                activity,
+                status!!.text
             )
         }
         //            this.favorite.setOnClickListener(v -> callback.onFavoriteClick(status));
@@ -171,7 +169,7 @@ class RandomFragment : R_F(), RandomView<Status>, OnLikeListener {
 //                this.favorite.setImageResource(R.drawable.ic_star_black_24dp);
 //            }
 //this.itemView.setOnClickListener(v -> callback.onWordClick(status));
-        favBtn.isLiked = this.status0!!.liked > 0
+        favBtn.isLiked = status!!.liked > 0
         rlLike.setOnClickListener(favBtn)
 
 
@@ -190,96 +188,35 @@ class RandomFragment : R_F(), RandomView<Status>, OnLikeListener {
 //        sharePintrestIntent.putExtra(Intent.EXTRA_STREAM, OnePresenter.getLocalBitmapUri(getActivity(), bitmap));
 //        sharePintrestIntent.setType("image/*");
 //        startActivityForResult(sharePintrestIntent, 443);
-        getTools().visibility = View.GONE
+        getTools().setVisibility(View.GONE)
         //bitmapper();
     }
 
-    override fun bindSelectedCategories(categoryNames: List<String>) {
-        var smile = ""
-        val appName = getString(R.string.app_name)
-        val packageName = requireContext().packageName
-
-        //        appName = myProject.getNames()[0];//getString(R.string.app_name);
-//        com.walhalla.promo.TelegramSender.sendStatusToTelegram(client, myProject, status0.text, status0.author, bitmap, categoryNames);
-//        //===================================
-//        smile = TelegramSender.getSmiles0();
-        smile = smile + "" + "\n" // +"Категория: "
-
-
-        val sb = StringBuilder()
-        for (categoryName in categoryNames) {
-            sb.append("" + "#").append(categoryName.replace(" ", "")).append("\n")
-        }
-        val statusAuthor = status0!!.getAuthor()
-        if (!TextUtils.isEmpty(statusAuthor)) {
-            val formated = statusAuthor.replace(" ", "")
-            sb.append("" + "#").append(formated).append("\n")
-        }
-
-        var quotes = status0!!.text
-        if (QTextUtils.isAuthorNotEmpty(status0!!.getAuthor())) {
-            quotes = ("""$quotes
-— ${status0!!.getAuthor()}
- ($appName — $packageName)""")
-        }
-
-
-        val msg =  //"<strong>" + result.get("title") + "</strong>\n" +
-            ("""
-                $quotes
-                
-                $smile$sb
-                
-                """.trimIndent())
-        //like dislike
-        //+ "<pre>" + l_count + " " + "\uD83D\uDC4D" + "\t\t" + " " + d_count + " \uD83D\uDC4E" + "</pre>"
-
-        //===================================
-        shareQuotesLikeImage(status0, msg)
-    }
-
-    private fun bitmapper() {
-        bitmap = BitmapUtils.getBitmapFromImageView(
-            cardBackground
-        )
-        if (bitmap == null) {
-            //Toast.makeText(getContext(), "@@@@", Toast.LENGTH_SHORT).show();
-        } else {
-            if (titles == null) {
-                titles = resources.getStringArray(R.array.c_title)
-            }
-            presenter!!.makeCatNames(status0!!.c_id)
-
-
-            //            String[] cats = this.status0.c_id.split(",");
-//            final int catLength = cats.length;
-//            String[] categoryNames = new String[catLength];
-//            for (int i = 0; i < catLength; i++) {
-//                int catIndex = Integer.parseInt(cats[i]) - 1;
-//                if (catIndex < catLength - 1) {
-//                    categoryNames[i] = titles[catIndex];
-//                } else {
-//                    categoryNames[i] = "@@" + catIndex;
-//                }
-//            }
-//
-//
-            //com.walhalla.promo.TelegramSender.sendStatusToTelegram(status.text, status.author, bitmap, categoryNames);
-        }
-    }
-
-
-    override fun liked(button: LikeButton) {
-        status0?.let {
-            it.setLiked()
-            presenter!!.updateStatus(it)
-        }
-    }
-
-    override fun unLiked(button: LikeButton) {
-        status0?.let {
-            it.setDisLiked()
-            presenter!!.updateStatus(it)
-        }
-    }
+    override fun bindSelectedCategories(message: MutableList<String?>?) {
+    } //    private void bitmapper() {
+    //        bitmap = BitmapUtils.getBitmapFromImageView(getCardBackground());
+    //        if (bitmap == null) {
+    //            //Toast.makeText(getContext(), "@@@@", Toast.LENGTH_SHORT).show();
+    //        } else {
+    //            if (titles == null) {
+    //                titles = getResources().getStringArray(R.array.c_title);
+    //            }
+    //            //@@@ presenter.makeCatNames(this.status.c_id);
+    //
+    //            String[] cats = this.status.c_id.split(",");
+    //            final int catLength = cats.length;
+    //            String[] categoryNames = new String[catLength];
+    //            for (int i = 0; i < catLength; i++) {
+    //                int catIndex = Integer.parseInt(cats[i]) - 1;
+    //                if (catIndex < catLength - 1) {
+    //                    categoryNames[i] = titles[catIndex];
+    //                } else {
+    //                    categoryNames[i] = "@@" + catIndex;
+    //                }
+    //            }
+    /*
+    * / */
+    //            //com.walhalla.promo.TelegramSender.sendStatusToTelegram(status.text, status.author, bitmap, categoryNames);
+    //        }
+    //    }
 }

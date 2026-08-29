@@ -1,5 +1,6 @@
 package com.christianquotestoinspire.bibleverses.motivation
 
+import androidx.appcompat.app.AppCompatDelegate
 import androidx.multidex.MultiDexApplication
 import com.google.android.gms.ads.AdRequest
 import com.google.android.gms.ads.MobileAds
@@ -19,6 +20,7 @@ class My0App : MultiDexApplication() {
 
 
     override fun onCreate() {
+        AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
         super.onCreate()
 
         val testDevices: MutableList<String> = ArrayList()

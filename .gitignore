@@ -13,3 +13,12 @@
 .externalNativeBuild
 .cxx
 local.properties
+
+# Local / build junk (append — do not wipe project rules above)
+.kotlin/
+.kotlin/errors/
+**/build/
+*.log
+hs_err_pid*.log
+lint-baseline.xml
+*.hprof

@@ -40,15 +40,15 @@ class StatusListFragment : Abstract0StatusListFragment<Category>(),
 
 
     override fun loadKeywords() {
-        if (category!!._id > 0) {
+        if ((category!!.id ?: 0L) > 0L) {
             interactor.getLikeData("%" + category!!.name + "%", this)
             //Search by like category_name
         } else {
             super.loadKeywords() //Favorite data
         }
 
-        //        if (category._id > 0) {
-//            interactor.getFullData(category._id, this);
+        //        if (category.id > 0) {
+//            interactor.getFullData(category.id, this);
 //        } else {
 //            super.loadKeywords();//Favorite data
 //        }
@@ -65,7 +65,7 @@ class StatusListFragment : Abstract0StatusListFragment<Category>(),
             override fun onMessageRetrieved(message: Int) {
                 //Toast.makeText(getContext(), "Добавлено в избранное", Toast.LENGTH_SHORT).show();
                 //We use favorite screen, so update
-                if (category!!._id < 1) {
+                if ((category!!.id ?: 0L) < 1L) {
                     loadKeywords()
                 }
             }

@@ -4,16 +4,15 @@ import java.text.SimpleDateFormat
 import java.util.Date
 import java.util.Properties
 
+fun versionCodeDate(): Int {
+    return SimpleDateFormat("yyMMdd").format(Date()).toInt() * 10 + 1
+}
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
     id("com.google.gms.google-services")
-    id("com.google.firebase.crashlytics")
-////    id("org.jetbrains.kotlin.android")
-////    id("kotlin-android")
-////    id("com.google.devtools.ksp") version "2.0.0-1.0.21"
-////    id("com.google.devtools.ksp")
-//    id("com.google.devtools.ksp") version "2.1.0-1.0.29"
+    alias(libs.plugins.firebase.crashlytics)
+    alias(libs.plugins.ksp)
 }
 
 val keystorePropertiesFile = rootProject.file("keystore.properties")
@@ -23,7 +22,8 @@ val keystoreProperties = Properties().apply {
 
 android {
     compileSdk = libs.versions.android.compileSdk.get().toInt()
-    buildToolsVersion = rootProject.extra["buildToolsVersion0"].toString()
+    buildToolsVersion = libs.versions.android.buildTools.get()
+    namespace = "com.christianquotes.inspirefaith"
 
     val versionPropsFile = file("version.properties")
 
@@ -34,8 +34,8 @@ android {
             resConfigs("ru", "uk", "en")
             multiDexEnabled = true
             applicationId = "com.christianquotes.inspirefaith"
-            minSdk = rootProject.extra["minSdkVersion0"].toString().toInt()
-            targetSdk = rootProject.extra["targetSdkVersion0"].toString().toInt()
+            minSdk = libs.versions.android.minSdk.get().toInt()
+            targetSdk = libs.versions.android.targetSdk.get().toInt()
             versionCode = code
             versionName = "1.2.$code"
             setProperty("archivesBaseName", "inspirefaith")
@@ -45,7 +45,6 @@ android {
         throw GradleException("Could not read version.properties!")
     }
 
-    namespace = "com.christianquotes.inspirefaith"
 
     signingConfigs {
         create("x") {
@@ -66,6 +65,9 @@ android {
             )
             signingConfig = signingConfigs.getByName("x")
             versionNameSuffix = "-DEMO"
+            firebaseCrashlytics {
+                mappingFileUploadEnabled = false
+            }
         }
 
         getByName("release") {
@@ -77,6 +79,9 @@ android {
             )
             signingConfig = signingConfigs.getByName("x")
             versionNameSuffix = ".release"
+            firebaseCrashlytics {
+                mappingFileUploadEnabled = false
+            }
         }
     }
 
@@ -87,6 +92,7 @@ android {
 
     buildFeatures {
         viewBinding = true
+        buildConfig = true
     }
 
     kotlinOptions {
@@ -112,16 +118,16 @@ dependencies {
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
 
-    implementation(project(":features:ui"))
+    implementation(project(":ui"))
     implementation(project(":threader"))
-    implementation(project(":features:wads"))
+    implementation(project(":wads"))
     implementation(project(":library"))
     implementation(project(":lib"))
     implementation(project(":features:ui_single"))
     implementation(project(":type:type_single"))
 
     implementation(libs.androidx.room.runtime)
-    annotationProcessor(libs.androidx.room.compiler)
+    ksp(libs.androidx.room.compiler)
 
 
     implementation(libs.androidx.multidex)
@@ -130,7 +136,4 @@ dependencies {
     implementation(libs.androidx.lifecycle.viewmodel.ktx)
 
     implementation(project(":photomovie_ui"))
-}
-fun versionCodeDate(): Int {
-    return SimpleDateFormat("yyMMdd").format(Date()).toInt()
 }

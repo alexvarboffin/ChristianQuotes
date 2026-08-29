@@ -48,7 +48,7 @@ dependencies {
     implementation(libs.androidx.room.runtime)
     annotationProcessor(libs.androidx.room.compiler)
 
-    implementation(project(":features:ui"))
+    implementation(project(":ui"))
     implementation(project(":threader"))
     implementation(project(":library"))
     api(project(":type:type_multiple_author"))  // Changed to api for wider visibility

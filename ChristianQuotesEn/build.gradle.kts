@@ -9,7 +9,7 @@ plugins {
     alias(libs.plugins.kotlin.android)
     id("com.google.gms.google-services")
     alias(libs.plugins.firebase.crashlytics)
-    id("com.google.devtools.ksp")
+    alias(libs.plugins.ksp)
 }
 
 val keystorePropertiesFile = rootProject.file("keystore.properties")
@@ -19,7 +19,8 @@ val keystoreProperties = Properties().apply {
 
 android {
     compileSdk = libs.versions.android.compileSdk.get().toInt()
-    buildToolsVersion = rootProject.extra["buildToolsVersion0"].toString()
+    buildToolsVersion = libs.versions.android.buildTools.get()
+    namespace = "com.christianquotestoinspire.bibleverses.motivation"
 
     val versionPropsFile = file("version.properties")
 
@@ -30,8 +31,8 @@ android {
             resConfigs("ru", "uk", "en")
             multiDexEnabled = true
             applicationId = "com.christianquotestoinspire.bibleverses.motivation"
-            minSdk = rootProject.extra["minSdkVersion0"].toString().toInt()
-            targetSdk = rootProject.extra["targetSdkVersion0"].toString().toInt()
+            minSdk = libs.versions.android.minSdk.get().toInt()
+            targetSdk = libs.versions.android.targetSdk.get().toInt()
             versionCode = code
             versionName = "1.2.$code"
             setProperty("archivesBaseName", "ChristianQuotesEn")
@@ -41,7 +42,6 @@ android {
         throw GradleException("Could not read version.properties!")
     }
 
-    namespace = "com.christianquotestoinspire.bibleverses.motivation"
 
     signingConfigs {
         create("x") {
@@ -56,6 +56,9 @@ android {
         getByName("debug") {
             signingConfig = signingConfigs.getByName("x")
             versionNameSuffix = "-DEMO"
+            firebaseCrashlytics {
+                mappingFileUploadEnabled = false
+            }
         }
 
         getByName("release") {
@@ -67,6 +70,9 @@ android {
             )
             signingConfig = signingConfigs.getByName("x")
             versionNameSuffix = ".release"
+            firebaseCrashlytics {
+                mappingFileUploadEnabled = false
+            }
         }
     }
 
@@ -104,15 +110,15 @@ dependencies {
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
 
-    implementation(project(":features:ui"))
+    implementation(project(":ui"))
     implementation(project(":threader"))
-    implementation(project(":features:wads"))
+    implementation(project(":wads"))
     implementation(project(":library"))
     implementation(project(":features:ui_multiple_author"))
     implementation(libs.androidx.preference.ktx)
 
     implementation(libs.androidx.room.runtime)
-    annotationProcessor(libs.androidx.room.compiler)
+    ksp(libs.androidx.room.compiler)
 
 
     implementation(libs.androidx.multidex)
@@ -125,5 +131,5 @@ dependencies {
 }
 
 fun versionCodeDate(): Int {
-    return SimpleDateFormat("yyMMdd").format(Date()).toInt()
+    return SimpleDateFormat("yyMMdd").format(Date()).toInt() * 10 + 1
 }

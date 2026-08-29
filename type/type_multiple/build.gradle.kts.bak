@@ -6,11 +6,11 @@ plugins {
 
 android {
     namespace = "com.walhalla.typemultiple"
-    compileSdk = 35
+    compileSdk = libs.versions.android.compileSdk.get().toInt()
 
     defaultConfig {
-        minSdk = rootProject.extra["minSdkVersion0"].toString().toInt()
-        targetSdk = rootProject.extra["targetSdkVersion0"].toString().toInt()
+        minSdk = libs.versions.android.minSdk.get().toInt()
+        targetSdk = libs.versions.android.targetSdk.get().toInt()
         consumerProguardFiles("consumer-rules.pro")
     }
 
@@ -38,11 +38,11 @@ dependencies {
     implementation(libs.material)
     implementation(project(":threader"))
     implementation (project(":library"))
-    implementation(project(":features:ui"))
-    implementation(project(":features:db_oraritreni"))
+    implementation(project(":ui"))
+    implementation(project(":db_oraritreni"))
 
     implementation(libs.androidx.room.runtime)
     implementation(libs.androidx.core.ktx)
-    //annotationProcessor(libs.androidx.room.compiler)
+    //ksp(libs.androidx.room.compiler)
     ksp(libs.androidx.room.compiler)
 }

@@ -42,6 +42,6 @@ dependencies {
 
     implementation(project(":threader"))
     implementation(project(":library"))
-    implementation(project(":features:ui"))
-    implementation(project(":features:db_oraritreni"))
+    implementation(project(":ui"))
+    implementation(project(":db_oraritreni"))
 }

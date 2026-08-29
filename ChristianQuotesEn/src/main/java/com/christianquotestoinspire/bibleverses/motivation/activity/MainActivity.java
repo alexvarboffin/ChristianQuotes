@@ -1,5 +1,7 @@
 package com.christianquotestoinspire.bibleverses.motivation.activity;
 
+import static com.walhalla.ui.plugins.DialogAbout.aboutDialog;
+
 import android.annotation.SuppressLint;
 import android.os.Bundle;
 import android.os.Handler;
@@ -267,7 +269,7 @@ public class MainActivity extends
             GDPR gdpr = new GDPR();
             gdpr.init(this);
 
-            AdvertInteractorImpl interactor = new AdvertInteractorImpl(ThreadExecutor.getInstance(), MainThreadImpl.getInstance(), My0App.repository);
+            AdvertInteractorImpl interactor = new AdvertInteractorImpl(My0App.repository);
             //aa.attach(this);
             //DLog.d("---->" + aa.hashCode());
             interactor.selectView(content, callback);
@@ -381,7 +383,7 @@ public class MainActivity extends
 //                return true;
         int itemId = item.getItemId();
         if (itemId == R.id.action_about) {
-            Module_U.aboutDialog(this);
+            aboutDialog(this);
             return true;
         } else if (itemId == R.id.action_privacy_policy) {
             Launcher.openBrowser(this, getString(R.string.url_privacy_policy));
@@ -474,11 +476,11 @@ public class MainActivity extends
     @Override
     public void readMore(Category category) {
         navItemIndex = 0;
-        String CURRENT_TAG = TypeNavItem.__TAG_CATEGORY_LIST + AppNavigator.TAG_DIVIDER + category._id;
+        String CURRENT_TAG = TypeNavItem.__TAG_CATEGORY_LIST + AppNavigator.TAG_DIVIDER + category.id;
         DLog.d(CURRENT_TAG);
 
 //        loadHomeFragment(CURRENT_TAG);
-//       Fragment fragment = StatusListFragment.newInstance(category._id);
+//       Fragment fragment = StatusListFragment.newInstance(category.id);
 //        FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
 //fragmentTransaction.setCustomAnimations(android.R.anim.fade_in, android.R.anim.fade_out);
 //        fragmentTransaction.replace(R.id.container, fragment, CURRENT_TAG);

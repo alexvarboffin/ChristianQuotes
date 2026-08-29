@@ -50,7 +50,7 @@ class AuthorFragment : Fragment(), AuthorView, AuthorListCallback {
             ThreadExecutor.getInstance(), MainThreadImpl.getInstance(),
             this, db.authorDao()
         )
-        presenter.getAllAuthors()
+        presenter.allAuthors
         return binding!!.root
     }
 

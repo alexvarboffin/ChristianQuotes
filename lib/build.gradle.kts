@@ -9,17 +9,18 @@ android {
     }
 
     compileSdk = libs.versions.android.compileSdk.get().toInt()
-    buildToolsVersion = rootProject.extra["buildToolsVersion0"].toString()
+    buildToolsVersion = libs.versions.android.buildTools.get()
+    namespace = "com.walhalla.core"
 
     defaultConfig {
         multiDexEnabled = true
-        minSdk = rootProject.extra["minSdkVersion0"].toString().toInt()
-        targetSdk = rootProject.extra["targetSdkVersion0"].toString().toInt()
+        minSdk = libs.versions.android.minSdk.get().toInt()
+        targetSdk = libs.versions.android.targetSdk.get().toInt()
     }
 
     buildTypes {
         getByName("release") {
-            isMinifyEnabled = true
+            //isMinifyEnabled = true
             proguardFiles(
                     getDefaultProguardFile("proguard-android-optimize.txt"),
                     "proguard-rules.pro"
@@ -33,7 +34,7 @@ android {
         targetCompatibility = JavaVersion.VERSION_17
     }
 
-    namespace = "com.walhalla.core"
+
     kotlinOptions {
         jvmTarget = "17"
     }
@@ -41,24 +42,24 @@ android {
 
 dependencies {
     implementation(libs.androidx.appcompat)
-    implementation("com.google.android.material:material:${rootProject.extra["materialVersion"]}")
-    implementation("com.google.firebase:firebase-ads:${rootProject.extra["gmsAds"]}")
+    implementation(libs.material)
+    implementation(libs.firebase.ads)
     implementation(libs.androidx.core.ktx)
 
     testImplementation(libs.junit)
-    androidTestImplementation("androidx.test.ext:junit:1.1.5")
-    androidTestImplementation("androidx.test.espresso:espresso-core:3.5.1")
+    androidTestImplementation(libs.androidx.junit)
+    androidTestImplementation(libs.androidx.espresso.core)
 
-    implementation(project(":features:ui"))
+    implementation(project(":ui"))
     implementation(project(":threader"))
     implementation(project(":library"))
-    implementation(project(":features:db_oraritreni"))
+    implementation(project(":db_oraritreni"))
     implementation(project(":type:type_single"))
 
     implementation(libs.androidx.room.runtime)
     annotationProcessor(libs.androidx.room.compiler)
-    api("com.github.jd-alexander:likebutton:0.2.3")
+    api(project(":likebutton"))
 
-    implementation("androidx.lifecycle:lifecycle-process:2.9.1")
-    implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8:${rootProject.extra["kotlin_version"]}")
+    implementation(libs.androidx.lifecycle.process)
+    implementation(libs.kotlin.stdlib.jdk8)
 }

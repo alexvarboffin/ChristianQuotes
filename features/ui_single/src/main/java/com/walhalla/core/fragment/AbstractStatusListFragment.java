@@ -73,7 +73,7 @@ public abstract class AbstractStatusListFragment
 //        if (keyword != null) {
 //            textView.setText("@@@");//getString(R.string.what_is_dreaming, keyword)
 //        }
-        int rawValue = Math.toIntExact(category._id);
+        int rawValue = Math.toIntExact(category.id);
         int[] images = loadCategory(getContext());
         imIndex = rawValue % images.length;
         adapter = new StatusAdapter(this, new ArrayList<>(), getActivity(), images);
@@ -154,7 +154,7 @@ public abstract class AbstractStatusListFragment
             public void onMessageRetrieved(Integer message) {
                 //Toast.makeText(getContext(), "Добавлено в избранное", Toast.LENGTH_SHORT).show();
                 //We use favorite screen, so update
-                if (category._id < 1) {
+                if (category.id < 1) {
                     loadKeywords();
                 }
             }
